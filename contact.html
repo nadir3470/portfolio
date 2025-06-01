@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Nadir Baloch</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+<!-- Scripting part. -->
+    
+  <!-- EmailJS SDK via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    window.onload = function () {
+      emailjs.init("-SEj5Uo9_8jR9mc9a"); //  EmailJS public key
+
+      document.getElementById("sendButton").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const params = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+        };
+
+                    //SERVICE KEY          //TEMPLATE KEY
+        emailjs.send("service_q63gz3j", "template_r5zlsop", params)
+          .then(function(response) {
+            alert("Email sent successfully!");
+            console.log("SUCCESS!", response.status, response.text);
+          }, function(error) {
+            alert("Failed to send email.");
+            console.error("FAILED...", error);
+          });
+      });
+    };
+  </script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Nadir Baloch</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p>Let's discuss a collaboration opportunity</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Let's Connect</h2>
+                        <p>I'm always interested in hearing about new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p>nadirshahjr2122@gmail.com </p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-details">
+                                    <h3>Phone</h3>
+                                    <p> 0433 029070 </p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h3>Location</h3>
+                                    <p>Perth, WA </p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">💼</div>
+                                <div class="contact-details">
+                                    <h3>LinkedIn</h3>
+                                    <p>https://www.linkedin.com/in/nadir-nadir-b82718352/</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="availability">
+                            <h3>Availability</h3>
+                            <p>I'm currently available for freelance projects and full-time opportunities. Response time is typically within 24 hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <h2>Send Me a Message</h2>
+                            
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Type your message here."></textarea>
+                            </div>
+
+
+                            <button type="submit" id="sendButton" class="btn btn-primary btn-full">
+                                Send Message
+                            </button>
+
+                            
+                                
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Let's turn your ideas into reality. I'm here to help you build something amazing.</p>
+                    <div class="cta-buttons">
+                        <a href="#contactForm" class="btn btn-primary">Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nadir Baloch. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nadir-nadir-b82718352/" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/nadir3470" aria-label="GitHub">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
