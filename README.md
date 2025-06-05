@@ -2,6 +2,7 @@
 
 This is my  personal portfolio website built with HTML and CSS. This project showcases my  skills, certifications and provides a contact form for potential clients or employers.
 
+The portfolio website can be accessed at www.nadirbaloch.com
 ![alt text](images/image-1.png)
 
 ## Table of Contents
@@ -11,14 +12,10 @@ This is my  personal portfolio website built with HTML and CSS. This project sho
 - [Pages](#pages)
   - [Home Page](#home-page)
   - [About Page](#about-page)
-  - [Projects Page](#projects-page)
   - [Certifications Page](#certifications-page)
   - [Contact Page](#contact-page)
 - [Styling](#styling)
-- [Features](#features)
-- [Customization](#customization)
-- [Future Enhancements](#future-enhancements)
-- [Browser Compatibility](#browser-compatibility)
+
 
 ## Overview
 
