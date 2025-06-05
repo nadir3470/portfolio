@@ -24,7 +24,7 @@ This portfolio website is designed to showcase my professional profile in a clea
 ## File Structure
 
 ```
-personal-portfolio/
+portfolio/
 │
 ├── index.html              # Home page
 ├── about.html              # About page
